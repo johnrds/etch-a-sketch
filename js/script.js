@@ -6,8 +6,10 @@ function createGrid(n) {
     for (let i = 0; i < (n * n); i++) {
         let grid = document.createElement('div');
         grid.classList = `grid ${i + 1}`;
+        grid.style.border = '1px solid var(--clr-gray-200)';
         grid.addEventListener('mouseover', () => {
             grid.style.backgroundColor = currentClr;
+
         });
         gridPanel.appendChild(grid);
     };
@@ -35,6 +37,16 @@ let currentClr = '#000000'
 const colorPicker = document.querySelector('#color');
 colorPicker.addEventListener('change', (e) => {
     currentClr = e.target.value;
+});
+
+const borderBtn = document.querySelector('.gridBorder');
+borderBtn.addEventListener('click', () => {
+    const grids = document.querySelectorAll('.grid');
+    grids.forEach(grid => {
+        if (grid.style.border === '') {
+            grid.style.border = '1px solid var(--clr-gray-200)';
+        } else { grid.style.border = '' };
+    });
 });
 
 createGrid(16);

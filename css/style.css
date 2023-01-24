@@ -111,7 +111,6 @@ ol>li {
     gap: 10px;
     justify-content: space-between;
     margin-bottom: 5px;
-    height: 1.5em;
 }
 
 @media (max-width:800px) {
@@ -119,10 +118,6 @@ ol>li {
         width: 70vw;
         height: 70vw;
     }
-}
-
-.gridPanel>* {
-    border: 1px solid var(--clr-gray-200);
 }
 
 button {
