@@ -1,7 +1,5 @@
 const gridPanel = document.querySelector('.gridPanel');
-
 function createGrid(n) {
-
     const prevGrids = document.querySelectorAll('.grid');
     prevGrids.forEach(grid => { grid.remove() });
 
@@ -9,7 +7,7 @@ function createGrid(n) {
         let grid = document.createElement('div');
         grid.classList = `grid ${i + 1}`;
         grid.addEventListener('mouseover', () => {
-            grid.classList.add('hover');
+            grid.style.backgroundColor = currentClr;
         });
         gridPanel.appendChild(grid);
     };
@@ -26,5 +24,17 @@ gridLabel.addEventListener('keypress', (e) => {
         || gridLabel.value > 50) return;
 
     createGrid(gridLabel.value);
-    gridLabel.value = "";
 });
+
+const resetBtn = document.querySelector('.resetBtn');
+resetBtn.addEventListener('click', () => {
+    createGrid(Math.sqrt(gridPanel.lastChild.classList[1]));
+});
+
+let currentClr = '#000000'
+const colorPicker = document.querySelector('#color');
+colorPicker.addEventListener('change', (e) => {
+    currentClr = e.target.value;
+});
+
+createGrid(16);

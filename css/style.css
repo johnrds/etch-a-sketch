@@ -1,4 +1,4 @@
-:root{
+:root {
     --clr-gray-100: hsl(231, 7%, 50%);
     --clr-gray-200: hsl(231, 7%, 19%);
 
@@ -10,7 +10,7 @@
 
 *,
 *::after,
-*::before{
+*::before {
     margin: 0;
     box-sizing: border-box;
 }
@@ -19,21 +19,21 @@ html:focus-within {
     scroll-behavior: smooth;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--clr-white-100);
 }
 
-a:hover{
+a:hover {
     color: var(--clr-white-200);
 }
 
 footer,
-footer a{
+footer a {
     color: var(--clr-gray-200);
 }
 
-footer a:hover{
+footer a:hover {
     color: var(--clr-gray-100);
 }
 
@@ -51,24 +51,24 @@ select {
 }
 
 html,
-body{
+body {
     width: 100%;
     min-height: 100vh;
     color: var(--clr-white-100);
 }
 
-body{
+body {
     font-family: var(--ff);
     display: flex;
     flex-direction: column;
 }
 
-body>*{
+body>* {
     width: 100%;
     padding: 25px;
 }
 
-header{
+header {
     background-color: var(--clr-gray-200);
     color: var(--clr-white-100);
     display: flex;
@@ -81,7 +81,7 @@ header ul li {
     padding-left: 10px;
 }
 
-main{
+main {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -89,11 +89,12 @@ main{
     background-color: var(--clr-gray-200);
 }
 
-.label{
-    margin-top: 20px;
+.instructions h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.gridPanel{
+.gridPanel {
     margin: 30px 0px;
     background-color: var(--clr-white-100);
     width: 30vw;
@@ -101,22 +102,39 @@ main{
     display: grid;
 }
 
-@media (max-width:800px){
-    .gridPanel{
+ol {
+    padding: 0;
+}
+
+ol>li {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    height: 1.5em;
+}
+
+@media (max-width:800px) {
+    .gridPanel {
         width: 70vw;
-        height: 70vw; 
+        height: 70vw;
     }
 }
 
-.gridPanel > *{
+.gridPanel>* {
     border: 1px solid var(--clr-gray-200);
 }
 
-.gridPanel > .hover{
-    background-color: orange;
+button {
+    padding: 3px 15px;
 }
 
-footer{
+footer {
     background-color: var(--clr-white-100);
     text-align: center;
+    padding: 10px 0px;
+}
+
+footer p {
+    margin-bottom: 10px;
 }
