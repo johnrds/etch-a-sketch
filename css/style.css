@@ -89,14 +89,23 @@ main{
     background-color: var(--clr-gray-200);
 }
 
+.label{
+    margin-top: 20px;
+}
+
 .gridPanel{
     margin: 30px 0px;
     background-color: var(--clr-white-100);
-    width: 450px;
-    height: 450px;
+    width: 30vw;
+    height: 30vw;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+}
+
+@media (max-width:800px){
+    .gridPanel{
+        width: 70vw;
+        height: 70vw; 
+    }
 }
 
 .gridPanel > *{
