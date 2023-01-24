@@ -89,11 +89,22 @@ main{
     background-color: var(--clr-gray-200);
 }
 
-.grids{
+.gridPanel{
     margin: 30px 0px;
     background-color: var(--clr-white-100);
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+.gridPanel > *{
+    border: 1px solid var(--clr-gray-200);
+}
+
+.gridPanel > .hover{
+    background-color: orange;
 }
 
 footer{
