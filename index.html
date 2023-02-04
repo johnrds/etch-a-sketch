@@ -11,39 +11,29 @@
 
 <body>
     <header>
-        <div class="left-side">
-            <h1>Etch-a-Sketch</h1>
-        </div>
-
-        <div class="right-side">
-            <ul class="nav-links">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
+        <h1>Etch-a-Sketch</h1>
     </header>
 
     <main>
+        <div class="gridPanel"></div>
         <div class="instructions">
-            <h2>How to play</h2>
             <ol>
                 <li>
-                    <label for="grid">Select the amount of grids per row (max 50): </label>
-                    <input type="text" id="grid" name="grid" required minlength="1" maxlength="3" size="4" value="16">
+                    <p>Brush color</p>
+                    <input type="color" id="brColor" name="brColor">
                 </li>
-                <li><label for="color">Select the color you want:</label>
-                    <input type="color" id="color" name="color">
+                <li>
+                    <p>Background color</p>
+                    <input type="color" id="bgColor" name="bgColor" value="#FFFFFF">
                 </li>
-                <li>Hover the grids and have fun</li>
+                <li><button class="resetBtn">Clear all</button></li>
+                <li><button class="gridBorder">Toggle border</button></li>
+                <li>
+                    <p class="rangeValue">16 x 16</p>
+                    <input type="range" name="gridRange" id="gridRange" value="16" min="1" max="50">
+                </li>
             </ol>
-
         </div>
-        <div class="gridPanel"></div>
-        <div class="buttons">
-        <button class="resetBtn">Reset grid</button>
-        <button class="gridBorder">Toggle border</button>
-    </div>
     </main>
 
     <footer>
