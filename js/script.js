@@ -18,12 +18,12 @@ function createGrid(n) {
     gridPanel.style.gridTemplateRows = `repeat(${n}, 1fr)`;
 };
 
-
 const gridRange = document.querySelector('#gridRange');
 const gridLabel = document.querySelector('.rangeValue');
 gridRange.addEventListener('change', (e) => {
     resetValues();
     createGrid(e.target.value);
+    gridLabel.textContent = `${e.target.value} x ${e.target.value}`
 });
 
 gridRange.addEventListener('mousemove', (e) => {
